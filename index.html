@@ -22,47 +22,127 @@
                 #### Gavin
                 ---
                 ## Agenda
-                - Brief Introduce of Defensive Programming
-                - How + Sample
-                - FAQ
-                ---
-                ## What’s?
-                is the practice of anticipating things that will likely go wrong and coding to handle such scenarios as opposed to easily throwing exceptions.
-                ---
-                ## Why?
-                - Protect functions from bad data
-                - Immutable bindings
-                ---
-                ## How?
+                - Promise
+                - Observable
+                - Same thing?
+                - Diffs
+                - Sample Code
             </script>
         </section>
 
         <section>
-            <img data-src="/dist/gigo.png" style="height: 50vh">
-            <h4>GIGO(Garbage In Garbage Out)</h4>
+            <section>
+                <h4>Promise</h4>
+                <p> A JavaScript Promise is an object that produces a single value, asynchronously.</p>
+            </section>
+            <section data-run-in-terminal="code/demo-what-promise.js">
+                <h4>Promise</h4>
+            </section>
         </section>
 
         <section>
-            <section data-run-in-terminal="code/demo0.js">
-                <h4>Use strict</h4>
+            <section>
+                <h4>Observable</h4>
+                <p> An Observable takes in a stream of data and emits multiple bits of data over time.</p>
             </section>
-            <section data-run-in-terminal="code/demo0-1.js">
-                <h4>Use strict (Fixed)</h4>
+            <section data-run-in-terminal="code/demo-what-observable.js">
+                <h4>Observable</h4>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h4>Difference</h4>
+                <p> ??? </p>
+            </section>
+            <section data-run-in-terminal="code/demo-winner-promise.js">
+                <h4>Promise</h4>
+            </section>
+            <section data-run-in-terminal="code/demo-winner-observable.js">
+                <h4>Observable</h4>
+            </section>
+        </section>
+
+        <section>
+            <img data-src="/dist/diff-promise-observable.png" style="height: 70vh">
+            <h4>Difference between Promise and Observable</h4>
+        </section>
+
+        <section>
+            <section data-run-in-terminal="code/demo-time-trigger-promise.js">
+                <h4>Time of Trigger (Promise)</h4>
+            </section>
+            <section data-run-in-terminal="code/demo-time-trigger-observable.js">
+                <h4>Time of Trigger (Observable)</h4>
+            </section>
+        </section>
+
+        <section>
+            <section data-run-in-terminal="code/demo-synchronous-promise.js">
+                <h4>Synchronous (Promise)</h4>
+            </section>
+            <section data-run-in-terminal="code/demo-synchronous-observable.js">
+                <h4>Synchronous (Observable)</h4>
+            </section>
+        </section>
+
+        <section>
+            <section data-run-in-terminal="code/demo-endtime-promise.js">
+                <h4>Emit Times (Promise)</h4>
+            </section>
+            <section data-run-in-terminal="code/demo-endtime-observable.js">
+                <h4>Emit Times (Observable)</h4>
+            </section>
+        </section>
+
+        <section>
+            <section data-run-in-terminal="code/demo-chain-processable-promise.js">
+                <h4>Chain processable (Promise)</h4>
+            </section>
+            <section data-run-in-terminal="code/demo-chain-processable-observable.js">
+                <h4>Chain processable (Observable)</h4>
+            </section>
+        </section>
+
+        <section>
+            <h4>Operators (Observable)</h4>
+            <img data-src="https://yakovfain.files.wordpress.com/2017/04/operators.png?w=946&h=&zoom=2"
+                 style="height: 70vh">
+        </section>
+
+        <section>
+            <section>
+                <h4>One more thing...Multicasting</h4>
+                <img data-src="https://yakovfain.files.wordpress.com/2017/04/push.png?w=1220&h=&zoom=2"
+                     style="height: 65vh">
+            </section>
+
+            <section data-run-in-terminal="code/demo-multicast-cold-observable.js">
+                <h4>Cold (Unicast)</h4>
+            </section>
+
+            <section data-run-in-terminal="code/demo-multicast-hot-observable.js">
+                <h4>Hot (Multicast)</h4>
             </section>
         </section>
 
         <section data-markdown data-separator="---">
             <script type="text/template">
-                ## In the End
-                XSS
+                ## When, Which
                 ---
-                ## End on End
-                Get rid of jQuery
+                ## Promise
+                - We need to handle the event, no matter what. We want that response.
+                - 无论发生什么我们都需要作出响应
+                - We want only one event handling to occur.
+                - 我们只希望发生一次事件处理
                 ---
-                ## Next?
-                > Too much of anything is bad, but too much whiskey is just enough.
-
-                \- Mark Twain
+                ## Observable
+                - We want to be able to "unsubscribe" from a stream of data.
+                - 我们希望能够“取消订阅”数据流.
+                - The ability to accept multiple events from the same source.
+                - 接受来自同一源的多个事件的能力.
+                ---
+                ## Everything is a Stream
             </script>
         </section>
     </div>

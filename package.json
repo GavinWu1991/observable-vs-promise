@@ -33,7 +33,7 @@
         "gulp-tap": "^2.0.0",
         "gulp-zip": "^5.0.1",
         "highlight.js": "^10.0.3",
-        "immutable": "^4.0.0-rc.12",
+        "rxjs": "^6.6.2",
         "marked": "^1.1.0",
         "node-qunit-puppeteer": "^2.0.1",
         "puppeteer": "^5.0.0",
