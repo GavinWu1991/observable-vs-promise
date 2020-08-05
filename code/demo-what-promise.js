@@ -4,5 +4,5 @@ const promise = new Promise((resolve) => {
 })
 
 promise.then(() => {
-    console.log("Jack: Ganxie!!!");
+    console.log("Jack: GanXie!!!");
 });

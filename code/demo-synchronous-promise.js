@@ -1,12 +1,11 @@
-const Rx = require("rxjs")
-
-const obs$ = Rx.of(console.log("who want to join the lunch learn?"))
-
-obs$.subscribe(() => {
-    console.log("Jack:I want to join!");
+const promise = new Promise((resolve) => {
+    console.log("start to count?");
+    resolve();
 })
 
-console.log("Ida:can I join it?");
+promise.then(() => {
+    console.log("1");
+});
 
-
+console.log("2");
 

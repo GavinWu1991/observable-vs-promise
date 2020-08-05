@@ -1,12 +1,21 @@
 const Rx = require("rxjs")
+const operators = require("rxjs/operators")
 
-const obs$ = Rx.of(console.log("who want to join the lunch learn?"))
+let obs$ = new Rx.Observable((observable) => {
+    observable.next(new Date().toISOString());
+}).pipe(
+    operators.publish()
+);
 
-obs$.subscribe(() => {
-    console.log("Jack:I want to join!");
+obs$.subscribe((date) => {
+    console.log("First:" + date);
 })
 
-console.log("Ida:can I join it?");
+obs$.subscribe((date) => {
+    console.log("Second:" + date);
+})
+
+obs$.connect();
 
 
 

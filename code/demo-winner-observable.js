@@ -1,6 +1,9 @@
 const Rx = require("rxjs")
 
-const obs$ = Rx.of(console.log("who want to join the lunch learn?"))
+const obs$ = new Rx.Observable((observable) => {
+    console.log("who want to join the lunch learn?");
+    observable.next();
+});
 
 obs$.subscribe(() => {
     console.log("Jack:I want to join!");
