@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Observable vs Promise</title>
+
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/league.css">
+    <link rel="stylesheet" href="plugin/reveal-run-in-terminal.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown data-separator="---">
+            <script type="text/template">
+                ## Observable vs Promise
+                #### Gavin
+                ---
+                ## Agenda
+                - Brief Introduce of Defensive Programming
+                - How + Sample
+                - FAQ
+                ---
+                ## What’s?
+                is the practice of anticipating things that will likely go wrong and coding to handle such scenarios as opposed to easily throwing exceptions.
+                ---
+                ## Why?
+                - Protect functions from bad data
+                - Immutable bindings
+                ---
+                ## How?
+            </script>
+        </section>
+
+        <section>
+            <img data-src="/dist/gigo.png" style="height: 50vh">
+            <h4>GIGO(Garbage In Garbage Out)</h4>
+        </section>
+
+        <section>
+            <section data-run-in-terminal="code/demo0.js">
+                <h4>Use strict</h4>
+            </section>
+            <section data-run-in-terminal="code/demo0-1.js">
+                <h4>Use strict (Fixed)</h4>
+            </section>
+        </section>
+
+        <section data-markdown data-separator="---">
+            <script type="text/template">
+                ## In the End
+                XSS
+                ---
+                ## End on End
+                Get rid of jQuery
+                ---
+                ## Next?
+                > Too much of anything is bad, but too much whiskey is just enough.
+
+                \- Mark Twain
+            </script>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<!--<script src="plugin/reveal-run-in-terminal.js"></script>-->
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+        slideNumber: 'c/t',
+        dependencies: [
+            {
+                src: 'plugin/reveal-run-in-terminal.js', async: true,
+                callback: function () {
+                    RunInTerminal.init({defaultBin: 'node'});
+                }
+            }],
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>

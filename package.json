@@ -1,0 +1,86 @@
+{
+    "name": "observable-vs-promise",
+    "version": "0.0.1",
+    "description": "Observable vs Promise",
+    "license": "MIT",
+    "scripts": {
+        "start": "node app.js",
+        "export": "decktape localhost:5000/?print-pdf export-slides.pdf"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.6",
+        "@babel/preset-env": "^7.9.6",
+        "@rollup/plugin-babel": "^5.0.2",
+        "@rollup/plugin-commonjs": "^12.0.0",
+        "@rollup/plugin-node-resolve": "^8.0.0",
+        "babel-eslint": "^10.1.0",
+        "babel-plugin-transform-html-import-to-string": "0.0.1",
+        "colors": "^1.4.0",
+        "core-js": "^3.6.5",
+        "decktape": "^3.0.0",
+        "express": "^4.14.0",
+        "glob": "^7.1.6",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-connect": "^5.7.0",
+        "gulp-eslint": "^6.0.0",
+        "gulp-header": "^2.0.9",
+        "gulp-sass": "^4.0.2",
+        "gulp-tap": "^2.0.0",
+        "gulp-zip": "^5.0.1",
+        "highlight.js": "^10.0.3",
+        "immutable": "^4.0.0-rc.12",
+        "marked": "^1.1.0",
+        "node-qunit-puppeteer": "^2.0.1",
+        "puppeteer": "^5.0.0",
+        "qunit": "^2.10.0",
+        "reveal.js": "^3.3.0",
+        "rollup": "^2.10.9",
+        "rollup-plugin-terser": "^5.3.0",
+        "yargs": "^15.1.0"
+    },
+    "puppeteer": {
+        "chromium_revision": "737027"
+    },
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es6": true
+        },
+        "parser": "babel-eslint",
+        "parserOptions": {
+            "sourceType": "module",
+            "allowImportExportEverywhere": true
+        },
+        "globals": {
+            "module": false,
+            "console": false,
+            "unescape": false,
+            "define": false,
+            "exports": false
+        },
+        "rules": {
+            "curly": 0,
+            "eqeqeq": 2,
+            "wrap-iife": [
+                2,
+                "any"
+            ],
+            "no-use-before-define": [
+                2,
+                {
+                    "functions": false
+                }
+            ],
+            "new-cap": 2,
+            "no-caller": 2,
+            "dot-notation": 0,
+            "no-eq-null": 2,
+            "no-unused-expressions": 0
+        }
+    }
+}
