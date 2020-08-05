@@ -1,12 +1,13 @@
 const Rx = require("rxjs")
+const operators = require("rxjs/operators")
 
-const obs$ = Rx.of(console.log("who want to join the lunch learn?"))
+const obs$ = Rx.of(1);
+const result = obs$.pipe(
+    operators.mergeMap(() => Rx.interval(1)
+        .pipe(operators.map(num => num + 1))),
+    operators.take(3)
+);
 
-obs$.subscribe(() => {
-    console.log("Jack:I want to join!");
-})
-
-console.log("Ida:can I join it?");
-
+result.subscribe(x => console.log(x));
 
 

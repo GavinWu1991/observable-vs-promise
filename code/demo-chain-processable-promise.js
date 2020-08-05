@@ -1,12 +1,17 @@
-const Rx = require("rxjs")
-
-const obs$ = Rx.of(console.log("who want to join the lunch learn?"))
-
-obs$.subscribe(() => {
-    console.log("Jack:I want to join!");
+const promise1 = new Promise(function (resolve, reject) {
+    setTimeout(() => resolve(1), 100);
 })
 
-console.log("Ida:can I join it?");
+const promise2 = promise1.then(function (result) {
+    console.log(result); // 1
+    return result + 1;
+})
 
+const promise3 = promise2.then(function (result) {
+    console.log(result);
+    return result + 1;
+})
 
-
+promise3.then(function (result) {
+    console.log(result);
+});

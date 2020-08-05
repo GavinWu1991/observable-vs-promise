@@ -1,12 +1,11 @@
 const Rx = require("rxjs")
 
-const obs$ = Rx.of(console.log("who want to join the lunch learn?"))
+const obs$ = Rx.of(1, 2, 3)
 
-obs$.subscribe(() => {
-    console.log("Jack:I want to join!");
+obs$.subscribe((num) => {
+    console.log(num);
 })
 
-console.log("Ida:can I join it?");
 
 
 
