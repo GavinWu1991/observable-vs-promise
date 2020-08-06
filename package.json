@@ -5,7 +5,7 @@
     "license": "MIT",
     "scripts": {
         "start": "node app.js",
-        "export": "decktape localhost:5000/?print-pdf export-slides.pdf"
+        "export": "node app.js && decktape http://localhost:5000/?print-pdf observable-vs-promise-slides.pdf"
     },
     "engines": {
         "node": ">=10.0.0"
